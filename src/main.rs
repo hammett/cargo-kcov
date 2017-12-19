@@ -113,7 +113,7 @@ fn filtering_arg<'a, 'b>(name: &'a str, help: &'b str) -> Arg<'a, 'b> {
 }
 
 fn run(matches: &ArgMatches) -> Result<(), Error> {
-    if cfg!(any(target_os="windows", target_os="macos", target_os="ios")) {
+    if cfg!(any(target_os="windows", target_os="ios")) {
         return Err(Error::UnsupportedOS);
     }
 
